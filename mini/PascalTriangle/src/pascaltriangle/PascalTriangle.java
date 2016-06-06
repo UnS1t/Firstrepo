@@ -15,7 +15,8 @@ public class PascalTriangle {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       
+       Algorithm test = new Algorithm(12);
+       test.generating();
     }
     
 }
