@@ -38,5 +38,8 @@ public class IO {
         }
         
     }
+    public void delette(){
+    
+}
     
 }

@@ -9,7 +9,7 @@ import java.io.File;
 
 public class Database{
     
-    public File inventFile = new File("inventory.dat");
+    public File file = new File("inventory.dat");
     public String title;
     public int duration;
     public String description;
@@ -26,12 +26,14 @@ public class Database{
     }
     
    public void addingVcr(){
-       
+       IO add = new IO(file);
+       add.Write();
        
     
 }
    public void delettingVcr(){
-    
+    IO del = new IO(file);
+    del.Read();
 }
   
 
