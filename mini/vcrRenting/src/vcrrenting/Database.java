@@ -26,14 +26,14 @@ public class Database{
     }
     
    public void addingVcr(){
-       IO add = new IO(file);
-       add.Write();
+       
+       
        
     
 }
    public void delettingVcr(){
-    IO del = new IO(file);
-    del.Read();
+    
+   
 }
   
 
