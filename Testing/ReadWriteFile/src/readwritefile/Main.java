@@ -5,59 +5,31 @@
  */
 package readwritefile;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.util.*;
+
 
 
 /**
  *
  * @author iHat3i
  */
-public class Main extends JFrame implements ActionListener {
+public class Main  {
     
     public static void main(String[] args){
-        new Main().setVisible(true);
-    }
-    public Main(){
-        super("TROLOLOL");
-        setSize(600,600);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setResizable(false);
-        Button button = new Button("DON'T CLICK");
-        button.setActionCommand("button");
-        Button button2 = new Button("wtf");
+        List <String> lol = new ArrayList<String>();
+        List <String> test = new ArrayList<String>();
         
-        
-        setLayout (new FlowLayout());
-        /**
-         *FlowLayout
-         * GridBagLayout
-         * GridLayout
-         * BorderLayout
-        */
-        
-        add(button);
-        add(button2);
-    button.addActionListener(this);
-    button2.addActionListener(this);
-}
-
-    @Override
-    public void actionPerformed(ActionEvent ae) {
-        String action = ae.getActionCommand();
-        switch(action){
-            case "wtf":
-                
-                System.out.println("?");
-                this.dispose();
-                break;
-            case "button":
-                System.out.println("LOLOLOL");
-                break;
+        for (int i = 0; i < 100; i++) {
+            lol.add("1");
             
             
         }
-    }
+        test.addAll(lol);
+        test.add(null);
+        lol.addAll(test);
+        
+       
+            }
+        
+    
 }

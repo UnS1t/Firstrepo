@@ -46,11 +46,14 @@ public class Core {
         }
     public void add(List<String> data, String what) throws IOException, ParseException{
         int id;
+        int length = 0;
         
         switch(what){
             case "client":
-                id = client.length + 1;
-                for (int i = 0; i < client.length; i++) {
+            	if(new Client().file.length() != 0)
+            		length = client.length;
+                id = length + 1;
+                for (int i = 0; i < length; i++) {
             if(client[i].ID != i){
                 id = i;
                 break;

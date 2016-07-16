@@ -24,12 +24,19 @@ public class Client {
     
    public void GiveList(int arrayLoc) throws IOException{
        IO read = new IO(file,data,valueCount);
-        
+       if(file.length() > 0){
        data.addAll(read.Read(arrayLoc * valueCount));
        ID = Integer.parseInt(data.get(0));
        name = data.get(1);
        phone = data.get(2);
        address = data.get(3);
+       }else{
+    	   ID = 0;
+    	   name = "null";
+    	   phone = "null";
+    	   address = "null";
+    	   
+       }
        
    }
    public Client() throws IOException{
@@ -40,6 +47,7 @@ public class Client {
         name = setName;
         phone = setPhone;
         address = setAddress;
+        
         data.add(Integer.toString(ID));
         data.add(name);
         data.add(phone);
@@ -61,6 +69,7 @@ public class Client {
     }
     
        public void addingClient(){
+    	   
            IO add = new IO(file,data,valueCount);
            
            add.Write();

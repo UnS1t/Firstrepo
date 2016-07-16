@@ -13,14 +13,19 @@ public class IO {
     public List<String> data;
     public int valueCount;
     
+    
     public IO(File setFile, List<String> setData, int setValueCount){
         data.addAll(setData);
         file = setFile;
         valueCount = setValueCount;
+        
+       
+        
     }
    
     
     public List Read(int arrayLoc) throws IOException{
+    	
         List<String> sendData = new ArrayList<String>();
         BufferedReader input = new BufferedReader(new FileReader(file));
         input.mark(arrayLoc);
